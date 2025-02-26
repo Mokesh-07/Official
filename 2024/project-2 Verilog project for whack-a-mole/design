@@ -6,41 +6,35 @@ assign ld = holes;
 endmodule // wam_led
 
 //Module 2
-module wam_obd( // 1-bit digital tube output
-input wire [3:0] num,
-output reg [6:0] a2g
-);
-always @(*) begin
-case(num)
-'h0: a2g=7'b0000001;
-'h1: a2g=7'b1001111;
-'h2: a2g=7'b0010010;
-'h3: a2g=7'b0000110;
-'h4: a2g=7'b1001100;
-'h5: a2g=7'b0100100;
-'h6: a2g=7'b0100000;
-'h7: a2g=7'b0001111;
-'h8: a2g=7'b0000000;
-'h9: a2g=7'b0000100;
-'hA: a2g=7'b1001000; // use A for H
-'hB: a2g=7'b0011100; // use B for higher o
-'hC: a2g=7'b0110001;
-'hD: a2g=7'b1000010;
-'hE: a2g=7'b0110000;
-'hF: a2g=7'b1111111; // use F for blank
-default: a2g=7'b1111111; // default is blank
-endcase
-end
+module wam_obd( input wire [3:0] num, output reg [6:0] a2g); // 1-bit digital tube output
+always @(*) 
+  begin
+    case(num)
+      'h0: a2g=7'b0000001;
+      'h1: a2g=7'b1001111;
+      'h2: a2g=7'b0010010;
+      'h3: a2g=7'b0000110;
+      'h4: a2g=7'b1001100;
+      'h5: a2g=7'b0100100;
+      'h6: a2g=7'b0100000;
+      'h7: a2g=7'b0001111;
+      'h8: a2g=7'b0000000;
+      'h9: a2g=7'b0000100;
+      'hA: a2g=7'b1001000; // use A for H
+      'hB: a2g=7'b0011100; // use B for higher o
+      'hC: a2g=7'b0110001;
+      'hD: a2g=7'b1000010;
+      'hE: a2g=7'b0110000;
+      'hF: a2g=7'b1111111; // use F for blank
+      default: a2g=7'b1111111; // default is blank
+    endcase
+  end
 endmodule // wam_obd
-Module 3
-module wam_lst ( // digital first bit (hardness bit) flashing for tap or hardness change
-input wire clk_19,
-input wire [7:0] tap,
-input wire lft,
-input wire rgt,
-input wire cout0,
-output reg lstn
-);
+
+//Module 3 
+//digital first bit (hardness bit) flashing for tap or hardness change
+module wam_lst ( input wire clk_19, input wire [7:0] tap,
+input wire lft, input wire rgt, input wire cout0, output reg lstn);
 reg [3:0] cnt; // counter
 wire trg; // trigger signal
 wire cout0s; // cout0 signal conveter
@@ -64,7 +58,8 @@ end
 end
 end
 endmodule // wam_lst
-Module 4
+
+//Module 4
 module wam_dis( // handle digital tube output
 input clk_16,
 input wire [3:0] hrdn,
@@ -103,13 +98,11 @@ endcase
 end
 wam_obd obd( .num(dnum), .a2g(a2g) );
 endmodule // wam_dis
-Module 5
+
+//Module 5
 module wam_rdn( // generate 8-bit random number
-input wire clk,
-input wire load,
-input wire [7:0] seed,
-output reg [7:0] num
-);
+input wire clk, input wire load,
+input wire [7:0] seed, output reg [7:0] num);
 always @( posedge clk or posedge load ) begin
 if(load)
 num <= seed; // load seed
@@ -125,7 +118,8 @@ num[7] <= num[6];
 end
 end
 endmodule // wam_rdn
-Module 6
+
+//Module 6
 module wam_gen ( // control lives of moles
 input wire clk_19,
 input wire clr,
@@ -188,7 +182,8 @@ end
 end
 end
 endmodule // wam_gen
-Module 7
+
+//Module 7
 module wam_tap ( // input switch
 input wire clk_19,
 input wire [7:0] sw,
@@ -226,7 +221,8 @@ end
 end
 end
 endmodule // wam_tap
-Module 8
+
+//Module 8
 module wam_hit ( // get successful hit condition
 input wire clk_19,
 input wire [7:0] tap,
@@ -239,7 +235,8 @@ hit <= tap & holes_pre; // both tap and have mole, then is successful hit
 holes_pre <= holes; // save hole status
 end
 endmodule // wam_hit
-Module 9
+
+//Module 9
 module wam_tch ( // input button
 input wire clk_19,
 input wire btn,
@@ -274,7 +271,8 @@ end
 end
 end
 endmodule // wam_tch
-Module 10
+
+//Module 10
 module wam_hrd ( // hardness control
 input wire clk_19,
 input wire clr,
@@ -308,7 +306,8 @@ end
 end
 end
 endmodule // wam_hrd
-Module 11
+
+//Module 11
 module wam_par ( // decide hardness parameters
 input wire [3:0] hrdn,
 output reg [3:0] age,
@@ -367,7 +366,8 @@ end
 endcase
 end
 endmodule // wam_par
-Module 12
+
+//Module 12
 `timescale 1ns / 1ps
 module wam_m(
 input wire clk, // clock (50MHz)
@@ -422,10 +422,10 @@ wam_led sub_led( .holes(holes), .ld(ld) );
 wam_lst sub_lst( .clk_19(clk_19), .tap(tap), .lft(lft), .rgt(rgt), .cout0(cout0), .lstn(lstn) );
 wam_dis sub_dis( .clk_16(clk_16), .hrdn(hrdn), .score(score), .lstn(lstn), .an(an), .a2g(a2g) );
 endmodule
-Module 13
+
+//Module 13
 module wam_cnt( // 1-bit 0-to-9 counter
-input wire clr,
-input wire cin,
+input wire clr, input wire cin,
 output reg cout, // carry bit
 output reg [3:0] num // DEC number in BCD
 );
@@ -449,7 +449,8 @@ end
 end
 end
 endmodule // wam_cnt
-Module 14
+
+//Module 14
 module wam_scr( // score count
 input wire clk, // synchronize clock
 input wire clr,
@@ -468,17 +469,13 @@ always @(posedge clk) begin
 num <= cnum; // synchronize clock
 end
 endmodule // wam_scr
-Module 15 ( FSM )
-module wam_fsm (
-input wire clk_19,
-input wire clr,
-input wire [7:0] sw,
-input wire [7:0] tap,
-input wire [7:0] holes,
-output reg [7:0] hit,
-output reg [7:0] holes_out,
-output reg [3:0] hrdn_out
-);
+
+//Module 15 ( FSM )
+module wam_fsm (input wire clk_19,
+input wire clr, input wire [7:0] sw,
+input wire [7:0] tap, input wire [7:0] holes,
+output reg [7:0] hit, output reg [7:0] holes_out,
+output reg [3:0] hrdn_out);
 reg [1:0] state;
 reg [7:0] tap_reg;
 reg [7:0] holes_reg;
@@ -546,7 +543,8 @@ end
 endcase
 end
 endmodule
-Module 16 (Score keeper)
+
+//Module 16 (Score keeper)
 module WhackAMole(input clk, input start, input whack, output reg game_over);
 reg [3:0] lives_reg;
 reg [3:0] whacks_reg;
