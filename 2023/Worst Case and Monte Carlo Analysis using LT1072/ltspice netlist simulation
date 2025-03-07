@@ -1,0 +1,20 @@
+* C:\Users\Mokesh Kumar V\Documents\LTspice\lt1072.asc
+XU1 N005 N004 0 N002 N001 LT1072
+V1 N001 0 5v
+L1 N001 N002 {mc(150µH,tol)}
+D1 N002 N003 1N5819
+R1 N003 N004 10.7K
+R2 N004 0 1.24K
+R3 N006 N005 1K
+R4 N003 0 48
+C1 N003 0 {mc(500µF,tol)}
+C2 N006 0 {mc(1µH,tol)}
+.model D D
+.lib C:\Users\Mokesh Kumar V\AppData\Local\LTspice\lib\cmp\standard.dio
+.tran 25m
+.param tol=.05 ; +/- 5% component tolerance
+.step param X 0 20 1 ; a dummy paramter to cycle Monte Carlo runs
+* .ac oct 100 300K 10Meg
+.lib LT1072.sub
+.backanno
+.end
