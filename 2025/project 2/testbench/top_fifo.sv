@@ -193,10 +193,12 @@ endclass
 class scoreboard;
  mailbox mon2scb;
  int no_trans;
- bit[7:0]ram[4];
- bit wr_ptr;
- bit rd_ptr;
- 
+ //bit[7:0]ram[4];
+ //bit wr_ptr;
+ //bit rd_ptr;
+ bit [31:0] ram[0:31];  // match FIFO width and depth
+int wr_ptr, rd_ptr;    // increase from 1-bit to full index
+
  function new(mailbox mon2scb);
    this.mon2scb = mon2scb;
    foreach(ram[i])begin
@@ -306,8 +308,9 @@ module tb_top;
  always #5 clk = ~ clk;
  
  initial begin
+  clk = 0;
   rst = 1;
-  #5 rst = 0;
+  #20 rst = 0;
  end
  
  fifo_intf intf(clk,rst) ;
