@@ -1,25 +1,8 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 22.06.2025 16:04:48
-// Design Name: 
-// Module Name: fifo_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
+
+//transaction module 1
 class transaction;
   //only input signals for randomisation and no ports
   bit rst,clk;
@@ -34,6 +17,7 @@ endclass
 
 
 
+//interface module 2
 interface fifo_intf(input logic clk,rst);
   logic [31:0]data_in;
   logic wr_en,rd_en;
@@ -63,6 +47,7 @@ endinterface
 
 
 
+//generator module 3
 class generator;
   //declaring transaction class 
   rand transaction trans;
@@ -88,6 +73,7 @@ endclass
 
 
 
+//driver module 4
 `define DRIVER_IF fifo_intf.DRIVER.driver_cb
 //DRIVER_IF ponts to the DRIVER modport in interface
 class driver;
@@ -163,6 +149,7 @@ endclass
 
 
 
+//monitor module 5
 `define MONITOR_IF fifo_intf.MONITOR.monitor_cb
 class monitor; 
  virtual fifo_intf vif_fifo;
@@ -202,6 +189,7 @@ endclass
 
 
 
+//scoreboard module 6
 class scoreboard;
  mailbox mon2scb;
  int no_trans;
@@ -247,6 +235,7 @@ endclass
 
 
 
+//environment module 7
 class environment;
   
   generator gen;
@@ -297,6 +286,7 @@ endclass
 
 
 
+//test module 8
 program test(fifo_intf intf);
   environment env;
   
@@ -309,6 +299,7 @@ endprogram
 
 
 
+//testbench_top module 9
 module tb_top;
  bit clk,rst;
  
