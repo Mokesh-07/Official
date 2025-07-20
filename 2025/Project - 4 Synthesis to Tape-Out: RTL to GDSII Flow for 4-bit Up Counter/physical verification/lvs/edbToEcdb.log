@@ -1,0 +1,17 @@
+
+/home/install/PVS222/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : up_counter_6432.db
+ECDB dir        : ./
+Top Cell        : up_counter
+CDL netlist     : svdb/up_counter.net
+Layer map file  : svdb/up_counter.ecdbmap
+Text map file   : svdb/up_counter.ports
+Dependency map  : up_counter.lmap.perc
+Lvs file        : svdb/up_counter.lvsfile
+Float net file  : .up_counter.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : up_counter_6432

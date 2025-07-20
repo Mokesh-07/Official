@@ -1,0 +1,196 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : up_counter                                   *
+* Netlisted  : Sun Jul 20 02:44:21 2025                     *
+* PVS Version: 22.20-p031 Thu Nov 17 19:06:38 PST 2022      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MN(nmos1v) _nmos_12 ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(pmos1v) _pmos_12 pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: DFFQXL                                          *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt DFFQXL Q CK VDD VSS D
+** N=17 EP=5 FDC=24
+M0 VSS 10 Q VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=710 $Y=1360 $dt=0
+M1 6 CK VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=1550 $Y=1360 $dt=0
+M2 VSS 11 10 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=3410 $Y=1240 $dt=0
+M3 12 10 VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=4250 $Y=1240 $dt=0
+M4 11 6 12 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=4770 $Y=1240 $dt=0
+M5 8 7 11 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=5850 $Y=1240 $dt=0
+M6 VSS 9 8 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=6690 $Y=1240 $dt=0
+M7 13 8 VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=7890 $Y=1240 $dt=0
+M8 9 7 13 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=8370 $Y=1240 $dt=0
+M9 14 6 9 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=9210 $Y=1240 $dt=0
+M10 VSS D 14 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=9650 $Y=1240 $dt=0
+M11 7 6 VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=10730 $Y=1240 $dt=0
+M12 VDD 10 Q VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=710 $Y=3450 $dt=1
+M13 6 CK VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=1550 $Y=3450 $dt=1
+M14 VDD 11 10 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=3170 $Y=3500 $dt=1
+M15 15 10 VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=4250 $Y=3500 $dt=1
+M16 11 7 15 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=4690 $Y=3500 $dt=1
+M17 8 6 11 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=5530 $Y=3500 $dt=1
+M18 VDD 9 8 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=6610 $Y=3500 $dt=1
+M19 16 8 VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=7690 $Y=3500 $dt=1
+M20 9 6 16 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=8130 $Y=3500 $dt=1
+M21 17 7 9 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=8970 $Y=3500 $dt=1
+M22 VDD D 17 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=9810 $Y=3500 $dt=1
+M23 7 6 VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=10650 $Y=3500 $dt=1
+.ends DFFQXL
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: NOR2X2                                          *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt NOR2X2 A B Y VDD VSS
+** N=7 EP=5 FDC=8
+M0 Y A VSS VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=780 $Y=920 $dt=0
+M1 VSS B Y VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=1620 $Y=920 $dt=0
+M2 Y B VSS VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=2460 $Y=920 $dt=0
+M3 VSS A Y VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=3300 $Y=920 $dt=0
+M4 6 A VDD VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=860 $Y=3120 $dt=1
+M5 Y B 6 VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=1620 $Y=3120 $dt=1
+M6 7 B Y VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=2460 $Y=3120 $dt=1
+M7 VDD A 7 VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=2900 $Y=3120 $dt=1
+.ends NOR2X2
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: NOR2X4                                          *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt NOR2X4 A Y VDD VSS B
+** N=9 EP=5 FDC=16
+M0 Y A VSS VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=710 $Y=840 $dt=0
+M1 VSS B Y VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=1550 $Y=840 $dt=0
+M2 Y B VSS VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=2390 $Y=840 $dt=0
+M3 VSS A Y VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=3230 $Y=840 $dt=0
+M4 Y A VSS VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=4070 $Y=840 $dt=0
+M5 VSS B Y VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=4910 $Y=840 $dt=0
+M6 Y B VSS VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=5750 $Y=840 $dt=0
+M7 VSS A Y VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=6590 $Y=840 $dt=0
+M8 6 A VDD VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=1110 $Y=3120 $dt=1
+M9 Y B 6 VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=2150 $Y=3120 $dt=1
+M10 7 B Y VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=2990 $Y=3120 $dt=1
+M11 VDD A 7 VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=3430 $Y=3120 $dt=1
+M12 8 A VDD VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=4270 $Y=3120 $dt=1
+M13 Y B 8 VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=4710 $Y=3120 $dt=1
+M14 9 B Y VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=5550 $Y=3120 $dt=1
+M15 VDD A 9 VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=6190 $Y=3120 $dt=1
+.ends NOR2X4
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: XNOR2X1                                         *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt XNOR2X1 Y A VDD VSS B
+** N=10 EP=5 FDC=12
+M0 VSS 8 Y VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=1110 $Y=980 $dt=0
+M1 6 A VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=1950 $Y=1240 $dt=0
+M2 8 B 6 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=2790 $Y=1240 $dt=0
+M3 9 7 8 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=3630 $Y=1240 $dt=0
+M4 VSS 6 9 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=4630 $Y=1240 $dt=0
+M5 7 B VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=5470 $Y=1240 $dt=0
+M6 VDD 8 Y VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=710 $Y=3080 $dt=1
+M7 6 A VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=1550 $Y=3080 $dt=1
+M8 8 7 6 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=2390 $Y=3080 $dt=1
+M9 10 B 8 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=3910 $Y=3080 $dt=1
+M10 VDD 6 10 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=4630 $Y=3080 $dt=1
+M11 7 B VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=5470 $Y=3080 $dt=1
+.ends XNOR2X1
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: NAND2XL                                         *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt NAND2XL A Y VDD VSS B
+** N=6 EP=5 FDC=4
+M0 6 A VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=800 $Y=1360 $dt=0
+M1 Y B 6 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=1240 $Y=1360 $dt=0
+M2 Y A VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=680 $Y=2760 $dt=1
+M3 VDD B Y VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=1520 $Y=2760 $dt=1
+.ends NAND2XL
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: DFFXL                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt DFFXL QN VDD VSS Q CK D
+** N=19 EP=6 FDC=28
+M0 VSS 13 QN VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=710 $Y=1360 $dt=0
+M1 13 11 VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=1550 $Y=1360 $dt=0
+M2 VSS 11 Q VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=3170 $Y=1360 $dt=0
+M3 7 CK VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=4170 $Y=1360 $dt=0
+M4 VSS 12 11 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=5790 $Y=1240 $dt=0
+M5 14 11 VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=6630 $Y=1240 $dt=0
+M6 12 7 14 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=7590 $Y=1240 $dt=0
+M7 9 8 12 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=8430 $Y=1240 $dt=0
+M8 VSS 10 9 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=9510 $Y=1240 $dt=0
+M9 15 9 VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=10710 $Y=1240 $dt=0
+M10 10 8 15 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=11350 $Y=1240 $dt=0
+M11 16 7 10 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=12190 $Y=1240 $dt=0
+M12 VSS D 16 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=12630 $Y=1240 $dt=0
+M13 8 7 VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=13710 $Y=1240 $dt=0
+M14 VDD 13 QN VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=710 $Y=2680 $dt=1
+M15 13 11 VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=1550 $Y=2680 $dt=1
+M16 VDD 11 Q VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=3330 $Y=2760 $dt=1
+M17 7 CK VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=4170 $Y=2760 $dt=1
+M18 VDD 12 11 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=5950 $Y=3500 $dt=1
+M19 17 11 VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=7030 $Y=3500 $dt=1
+M20 12 8 17 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=7470 $Y=3500 $dt=1
+M21 9 7 12 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=8350 $Y=3500 $dt=1
+M22 VDD 10 9 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=9510 $Y=3500 $dt=1
+M23 18 9 VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=10590 $Y=3500 $dt=1
+M24 10 7 18 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=11030 $Y=3500 $dt=1
+M25 19 8 10 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=11870 $Y=3500 $dt=1
+M26 VDD D 19 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=12790 $Y=3500 $dt=1
+M27 8 7 VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=13630 $Y=3500 $dt=1
+.ends DFFXL
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: CLKXOR2X1                                       *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt CLKXOR2X1 Y VDD VSS A B
+** N=10 EP=5 FDC=12
+M0 VSS 8 Y VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=710 $Y=980 $dt=0
+M1 6 A VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=1830 $Y=1080 $dt=0
+M2 8 7 6 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=3110 $Y=1080 $dt=0
+M3 9 B 8 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=3950 $Y=1080 $dt=0
+M4 VSS 6 9 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=4390 $Y=1080 $dt=0
+M5 7 B VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=5230 $Y=1080 $dt=0
+M6 VDD 8 Y VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=780 $Y=3120 $dt=1
+M7 6 A VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=1860 $Y=3240 $dt=1
+M8 8 B 6 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=2700 $Y=3240 $dt=1
+M9 10 7 8 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=3540 $Y=3240 $dt=1
+M10 VDD 6 10 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=4150 $Y=3240 $dt=1
+M11 7 B VDD VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=4990 $Y=3240 $dt=1
+.ends CLKXOR2X1
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: OR2X1                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt OR2X1 B A VDD VSS Y
+** N=7 EP=5 FDC=6
+M0 6 B VSS VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=770 $Y=1320 $dt=0
+M1 VSS A 6 VSS nmos1v L=1e-07 W=2.4e-07 fw=2.4e-07 simw=2.4e-07 $X=1610 $Y=1320 $dt=0
+M2 Y 6 VSS VSS nmos1v L=1e-07 W=4.3e-07 fw=4.3e-07 simw=4.3e-07 $X=2570 $Y=940 $dt=0
+M3 7 B 6 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=1170 $Y=3100 $dt=1
+M4 VDD A 7 VDD pmos1v L=1e-07 W=3.6e-07 fw=3.6e-13 simw=3.6e-07 $X=1610 $Y=3100 $dt=1
+M5 Y 6 VDD VDD pmos1v L=1e-07 W=6.5e-07 fw=6.5e-13 simw=6.5e-07 $X=2570 $Y=3100 $dt=1
+.ends OR2X1
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: up_counter                                      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt up_counter VDD VSS clk count[0] count[1] count[2] count[3] rst
+** N=18 EP=8 FDC=194
+X0 count[0] clk VDD VSS 5 DFFQXL $T=16240 31900 0 0 $X=15640 $Y=31540
+X1 count[3] clk VDD VSS 7 DFFQXL $T=21460 31900 1 0 $X=20860 $Y=26080
+X2 count[1] clk VDD VSS 9 DFFQXL $T=34800 31900 0 0 $X=34200 $Y=31540
+X3 10 rst 7 VDD VSS NOR2X2 $T=17980 21460 0 0 $X=17380 $Y=21100
+X4 count[0] rst 5 VDD VSS NOR2X2 $T=26100 42340 0 180 $X=20860 $Y=36520
+X5 12 9 VDD VSS rst NOR2X4 $T=37120 42340 1 0 $X=36520 $Y=36520
+X6 13 14 VDD VSS rst NOR2X4 $T=46400 21460 0 180 $X=38260 $Y=15640
+X7 12 count[0] VDD VSS count[1] XNOR2X1 $T=35380 42340 0 180 $X=28400 $Y=36520
+X8 13 15 VDD VSS 16 XNOR2X1 $T=38280 21460 0 180 $X=31300 $Y=15640
+X9 count[0] 16 VDD VSS count[1] NAND2XL $T=33060 31900 1 180 $X=30140 $Y=31540
+X10 15 VDD VSS count[2] clk 14 DFFXL $T=31900 21460 0 0 $X=31300 $Y=21100
+X11 10 VDD VSS count[3] 18 CLKXOR2X1 $T=17400 21460 1 0 $X=16800 $Y=15640
+X12 15 16 VDD VSS 18 OR2X1 $T=30160 21460 0 180 $X=26080 $Y=15640
+.ends up_counter

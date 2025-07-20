@@ -1,0 +1,49 @@
+# This PVS File Index Registry was created automatically
+# Do not attempt to modify this file as any change may lead
+# to PVS Debug Environment malfunction.
+# 
+"Run Directory" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1
+"Current Directory" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new
+"Cadence Directory" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/.cadence/
+"Job Signature" internal none IPVS_1752959424_3230
+"PVS Job Mode" internal none drc
+"GUI Flow" internal none innovus
+"GUI Preset" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/.preset.autosave
+"Technology Name" internal none "gpdk090"
+"Technology RuleSet" internal none "default"
+"Technology Mapping File" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/physical_verification_files/PVS_90nm/pvtech.lib
+"Technology Rule File" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/.technology.rul
+"PVS Version" internal none 22.20-p031
+"Binary Name" internal none pvsgui
+"PVS Build Date" internal none "Thu Nov 17 19:06:38 PST 2022"
+"PVS Job Time" internal none 1752959425
+"DFII version" internal none 6.1.2
+"Run Directory" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1
+"PVS Job Mode" internal none drc
+"Rule File" input text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/.technology.rul
+"Cell Tree" output text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/cell_tree.txt
+"Layout Top Cell" internal none up_counter
+"Layout GDSII" input none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/up_counter.gds.gz
+"Job Signature" internal none IPVS_1752959424_3230
+"Do not check rules files before run" internal none ENABLED
+"Control File" input text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/pvsdrcctl
+"TTE mode" internal none ENABLED
+"PVS Job Log" log text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/pvsuidrc.log
+"PVS Version" internal none 22.20-p031
+"Binary Name" internal none pvsvirt
+"PVS Build Date" internal none "Thu Nov 17 19:06:38 PST 2022"
+"PVS Job Time" internal none 1752959426
+"TTE mode" internal none ENABLED
+"Cell Tree" output text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/cell_tree.txt
+"PVS Job Mode" internal none drc
+"Rule File" input text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/.technology.rul
+"Layout GDSII" input none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/up_counter.gds.gz
+"DRC Summary" output text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/up_counter.sum
+"Run Directory" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/DRC_1/
+"UI Data" internal none ENABLED
+"PVS Mode Info" internal none HNPKMMKJKENCBMMAHNKBJMJFPJBHBBAI
+"Report MaxResults" internal none 1000
+"PVS Version" internal none 22.20-p031
+"Binary Name" internal none pvs
+"PVS Build Date" internal none "Thu Nov 17 19:06:38 PST 2022"
+"PVS Job Time" internal none 1752959426

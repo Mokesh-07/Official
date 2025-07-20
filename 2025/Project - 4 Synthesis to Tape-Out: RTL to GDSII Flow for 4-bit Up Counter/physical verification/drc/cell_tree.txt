@@ -1,0 +1,9 @@
+up_counter
+
+up_counter
+	DFFQXL
+	NOR2X2
+	NOR2X4
+	XNOR2X1
+	up_counter_VIA7
+

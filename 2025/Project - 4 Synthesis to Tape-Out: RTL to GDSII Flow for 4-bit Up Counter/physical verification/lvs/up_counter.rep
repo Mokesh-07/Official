@@ -1,0 +1,28 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : up_counter.rep
+ERC Summary File         : up_counter.sum
+LVS Comparison Report    : up_counter.rep.cls
+LVS Softchk Report       : up_counter.softchk
+Layout Name              : /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/up_counter.gds.gz ("up_counter")
+User Name                : M24_2
+Creation Time            : Sun Jul 20 02:44:21 2025
+Current directory        : /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1
+PVS Version              : 22.20-p031 Thu Nov 17 19:06:38 PST 2022
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)

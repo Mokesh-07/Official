@@ -1,0 +1,18 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary up_counter
+VDD 3 VDD 8620 16240 metal9_conn
+VDD 3 VDD 8620 16240 metal9_conn
+count[3] 6 count[3] 575 24070 metal3_conn
+count[3] 6 count[3] 575 24070 metal3_conn
+count[0] 1 count[0] 26970 58005 metal2_conn
+count[0] 1 count[0] 26970 58005 metal2_conn
+VSS 4 VSS 4020 20840 metal9_conn
+VSS 4 VSS 4020 20840 metal9_conn
+clk 2 clk 28130 58005 metal2_conn
+clk 2 clk 28130 58005 metal2_conn
+count[1] 8 count[1] 32770 58005 metal2_conn
+count[1] 8 count[1] 32770 58005 metal2_conn
+rst 11 rst 31610 58005 metal2_conn
+rst 11 rst 31610 58005 metal2_conn
+count[2] 17 count[2] 34510 575 metal2_conn
+count[2] 17 count[2] 34510 575 metal2_conn

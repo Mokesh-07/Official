@@ -1,0 +1,48 @@
+# This PVS File Index Registry was created automatically
+# Do not attempt to modify this file as any change may lead
+# to PVS Debug Environment malfunction.
+# 
+"Run Directory" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1
+"Current Directory" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new
+"Cadence Directory" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/.cadence/
+"Job Signature" internal none IPVS_1752959655_3230
+"PVS Job Mode" internal none lvs
+"GUI Flow" internal none innovus
+"GUI Preset" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/.preset.autosave
+"Technology Name" internal none "gpdk090"
+"Technology RuleSet" internal none "default"
+"Technology Mapping File" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/physical_verification_files/PVS_90nm/pvtech.lib
+"Technology Rule File" internal none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/.technology.rul
+"PVS Version" internal none 22.20-p031
+"Binary Name" internal none pvsgui
+"PVS Build Date" internal none "Thu Nov 17 19:06:38 PST 2022"
+"PVS Job Time" internal none 1752959656
+"DFII version" internal none 6.1.2
+"Rule File" input text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/.technology.rul
+"Layout Top Cell" internal none up_counter
+"Layout GDSII" input none /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/up_counter.gds.gz
+"Schematic Data is in Control File" internal none ENABLED
+"Extracted Spice File" output text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/up_counter.spi
+"Do not check rules files before run" internal none ENABLED
+"Control File" input text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/pvslvsctl
+"PVS Job Log" log text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/pvsuilvs.log
+"Binary Name" internal none pvsvirt
+"Comparison Report" output cls /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/up_counter.rep.cls
+"Extraction Report" output erc /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/up_counter.rep
+"LVS Report Options" internal none -none
+"Schematic Top Cell" internal none up_counter
+"SCONNECT RDB" output rdb /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/up_counter.softchk
+"ERC Summary" output text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/up_counter.sum
+"Extraction Result" internal none CLEAN
+"ERC Result" internal none EMPTY
+"UI Data" internal none ENABLED
+"PVS Mode Info" internal none HNPKMMKJKENCBMMAMBBBDJKGDLCBGGIP
+"Report MaxResults" internal none 1000
+"Binary Name" internal none pvs
+"Schematic Netlist" input text /home/M24_2/cadence_edt/mokesh_new/physical_design_90/trial_new/lvs_1/up_counter.v
+"Comparison Result" internal none REPORT INCOMPLETE, PVSNVN ABORTED BEFORE COMPLETION
+"LVS Run Name" internal none up_counter.rep
+"PVS Version" internal none 22.20-p031
+"Binary Name" internal none pvsnvn
+"PVS Build Date" internal none "Thu Nov 17 19:06:38 PST 2022"
+"PVS Job Time" internal none 1752959668
