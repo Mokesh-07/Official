@@ -1,0 +1,80 @@
+innovus 3>
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: up_counter
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI On
+#################################################################################
+   _____________________________________________________________
+  /  Design State
+ +--------------------------------------------------------------
+ | signal nets:
+ |    routed nets:       15 (100.0% routed)
+ |     total nets:       15
+ | clock nets:
+ |    routed nets:        1 (100.0% routed)
+ |     total nets:        1
+ +--------------------------------------------------------------
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: up_counter
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI On
+#################################################################################
+---- Cell: slow/DFFQX2 (view: WORST) ----
+Through-object Slack: -0.364
+Max Tran       Slack: -0.1001
+---- Cell: slow/DFFQX4 (view: WORST) ----
+Through-object Slack: -0.367
+Max Tran       Slack: -0.1001
+---- Cell: slow/DFFHQX4 (view: WORST) ----
+Through-object Slack: -0.370
+Max Tran       Slack: -0.1001
+---- Cell: slow/DFFHQX2 (view: WORST) ----
+Through-object Slack: -0.378
+Max Tran       Slack: -0.1001
+---- Cell: slow/DFFQX1 (view: WORST) ----
+Through-object Slack: -0.382
+Max Tran       Slack: -0.1134
+---- Cell: slow/DFFHQX1 (view: WORST) ----
+Through-object Slack: -0.387
+Max Tran       Slack: -0.1113
+---- Cell: slow/DFFHQX8 (view: WORST) ----
+Through-object Slack: -0.395
+Max Tran       Slack: -0.1001
+innovus 3>    _____________________________________________________________
+  /  Design State
+ +--------------------------------------------------------------
+ | signal nets:
+ |    routed nets:       15 (100.0% routed)
+ |     total nets:       15
+ | clock nets:
+ |    routed nets:        1 (100.0% routed)
+ |     total nets:        1
+ +--------------------------------------------------------------
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: up_counter
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI On
+#################################################################################
+*** Starting refinePlace (0:10:08 mem=2122.5M) ***
+Total net bbox length = 1.688e+02 (6.714e+01 1.016e+02) (ext = 7.221e+01)
+Move report: Detail placement moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+        Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 2138.5MB
+Summary Report:
+Instances move: 0 (out of 13 movable)
+Instances flipped: 0
+Mean displacement: 0.00 um
+Max displacement: 0.00 um
+Total net bbox length = 1.688e+02 (6.714e+01 1.016e+02) (ext = 7.221e+01)
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 2138.5MB
+*** Finished refinePlace (0:10:08 mem=2138.5M) ***
+**WARN: (IMPOPT-3549):  Timing updation on term count_reg[0]/CK will only happen in the late mode. Updation in both min/max modes cannot be done by ECO commands. This might cause inconsistency in timing number if you are in OCV mode and updation required for both the modes.
+Resize count_reg[0] (DFFQXL) to DFFQX1.
