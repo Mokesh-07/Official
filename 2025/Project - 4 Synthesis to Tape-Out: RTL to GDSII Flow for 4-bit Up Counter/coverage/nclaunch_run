@@ -30,3 +30,10 @@ Time	Reset	Count
 Simulation complete via $finish(1) at time 172 NS + 0
 ./tb_up_counter.v:44     $finish;
 ncsim> 
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_up_counter(tb_up_counter)
+  scope    :  scope
+  testname :  test
+
+coverage files:
