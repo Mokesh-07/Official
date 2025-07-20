@@ -1,0 +1,1 @@
+$irun up_counter.v tb_up_counter.v -access +rwc -gui
