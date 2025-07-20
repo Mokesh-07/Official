@@ -1,21 +1,22 @@
-[M24_2@vlsilab10 mokesh_new]$ irun up_counter.v tb_up_counter.v -access +rwc -gui
+[M24_2@vlsilab10 mokesh_new]$ irun up_counter.v tb_up_counter.v -coverage all -access +rwc -gui
 irun(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-file: up_counter.v
-        module worklib.up_counter:v
-                errors: 0, warnings: 0
-file: tb_up_counter.v
-        module worklib.tb_up_counter:v
-                errors: 0, warnings: 0
                 Caching library 'worklib' ....... Done
         Elaborating the design hierarchy:
         Top level design units:
                 tb_up_counter
+
+        Extracting FSMs for coverage:
+                worklib.up_counter
+                worklib.tb_up_counter
+        Total FSMs extracted = 0
         Building instance overlay tables: .................... Done
+        Enabling instrumentation for coverage types: block expression FSM toggle functional
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
         Generating native compiled code:
-                worklib.tb_up_counter:v <0x7164a0f0>
-                        streams:   5, words:  4990
-                worklib.up_counter:v <0x1e23c3f8>
-                        streams:   2, words:   487
+                worklib.tb_up_counter:v <0x41758d78>
+                        streams:   5, words:  6123
+                worklib.up_counter:v <0x153621c0>
+                        streams:   2, words:   721
         Building instance specific data structures.
         Loading native compiled code:     .................... Done
         Design hierarchy summary:
