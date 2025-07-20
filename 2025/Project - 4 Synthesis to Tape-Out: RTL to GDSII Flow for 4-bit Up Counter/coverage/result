@@ -1,0 +1,31 @@
+[M24_2@vlsilab10 mokesh_new]$ irun up_counter.v tb_up_counter.v -access +rwc -gui
+irun(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+file: up_counter.v
+        module worklib.up_counter:v
+                errors: 0, warnings: 0
+file: tb_up_counter.v
+        module worklib.tb_up_counter:v
+                errors: 0, warnings: 0
+                Caching library 'worklib' ....... Done
+        Elaborating the design hierarchy:
+        Top level design units:
+                tb_up_counter
+        Building instance overlay tables: .................... Done
+        Generating native compiled code:
+                worklib.tb_up_counter:v <0x7164a0f0>
+                        streams:   5, words:  4990
+                worklib.up_counter:v <0x1e23c3f8>
+                        streams:   2, words:   487
+        Building instance specific data structures.
+        Loading native compiled code:     .................... Done
+        Design hierarchy summary:
+                                 Instances  Unique
+                Modules:                 2       2
+                Registers:               3       3
+                Scalar wires:            2       -
+                Vectored wires:          1       -
+                Always blocks:           1       1
+                Initial blocks:          2       2
+                Pseudo assignments:      2       2
+                Simulation timescale:  1ps
+        Writing initial simulation snapshot: worklib.tb_up_counter:v
