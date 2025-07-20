@@ -1,0 +1,4 @@
+timeDesign -postRoute
+write_sdf -version 2.1 up_counter.sdf
+timeDesign -postRoute -hold
+write_sdf -version 2.1 up_counter_hold_postroute.sdf
