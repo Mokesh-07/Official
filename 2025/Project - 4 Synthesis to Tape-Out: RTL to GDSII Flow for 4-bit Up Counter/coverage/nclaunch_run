@@ -1,0 +1,32 @@
+ncsim> 
+ncsim> source /home/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm tb_up_counter.clk tb_up_counter.count tb_up_counter.rst
+Created probe 1
+ncsim> run
+Time	Reset	Count
+0ns	1	x
+5ns	1	0
+12ns	0	0
+15ns	0	1
+25ns	0	2
+35ns	0	3
+45ns	0	4
+55ns	0	5
+65ns	0	6
+75ns	0	7
+85ns	0	8
+95ns	0	9
+105ns	0	10
+112ns	1	10
+115ns	1	0
+122ns	0	0
+125ns	0	1
+135ns	0	2
+145ns	0	3
+155ns	0	4
+165ns	0	5
+Simulation complete via $finish(1) at time 172 NS + 0
+./tb_up_counter.v:44     $finish;
+ncsim> 
