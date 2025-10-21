@@ -1,0 +1,78 @@
+Untitled 1
+add_wave {{/tb_top/DUT/ram}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xilinx/programs_vivado/fifo_for_the_cadence/fifo_for_the_cadence.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xilinx/programs_vivado/fifo_for_the_cadence/fifo_for_the_cadence.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xilinx/programs_vivado/fifo_for_the_cadence/fifo_for_the_cadence.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xilinx/programs_vivado/fifo_for_the_cadence/fifo_for_the_cadence.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+Resetting DUT...
+Done resetting DUT.
+Transaction Count = 0
+	WRITE: data_in = fdf2bc48
+Transaction Count = 1
+	READ: data_out = 0
+Transaction Count = 2
+	WRITE: data_in = f93b8a03
+Transaction Count = 3
+	READ: data_out = fdf2bc48
+Transaction Count = 4
+	WRITE: data_in = a4f64365
+Transaction Count = 5
+	WRITE: data_in = d357f30e
+Transaction Count = 6
+	WRITE: data_in = af26c7cf
+Transaction Count = 7
+	READ: data_out = f93b8a03
+Transaction Count = 8
+Transaction Count = 9
+	WRITE: data_in = e8d2798e
+Transaction Count = 10
+	WRITE: data_in = be943e34
+Transaction Count = 11
+	READ: data_out = a4f64365
+Transaction Count = 12
+	WRITE: data_in = b3d4665a
+Transaction Count = 13
+	READ: data_out = d357f30e
+Transaction Count = 14
+	READ: data_out = af26c7cf
+Transaction Count = 15
+	WRITE: data_in = 9ada66ac
+Transaction Count = 16
+	READ: data_out = e8d2798e
+Transaction Count = 17
+	READ: data_out = be943e34
+Transaction Count = 18
+Transaction Count = 19
+	READ: data_out = b3d4665a
+Driver: All 20 transactions driven
+Generator: All 20 transactions generated
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1333.953 ; gain = 0.000
