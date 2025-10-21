@@ -1,0 +1,63 @@
+xrun -sv fifo.sv fifo_pgm_new_tb.sv -access +rwc -coverage all -covdut fifo -covoverwrite -R
+TOOL:   xrun    22.09-s003: Started on Oct 21, 2025 at 21:21:42 IST
+TOOL:   xrun(64)        22.09-s003: Started on Oct 21, 2025 at 21:21:42 IST
+xrun(64): 22.09-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xrun: *W,CSSF: HDL source files with -R option will be ignored.
+Loading snapshot worklib.tb_top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/install/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+Resetting DUT...
+Done resetting DUT.
+Transaction Count = 0
+        WRITE: data_in = f8a20cb2
+xmsim: *W,OLDURR: The default algorithm for $urandom_range and randcase is used. It can have distribution problems..
+Transaction Count = 1
+        WRITE: data_in = 6a764179
+Transaction Count = 2
+Transaction Count = 3
+        READ: data_out = 0
+Transaction Count = 4
+        READ: data_out = f8a20cb2
+Transaction Count = 5
+        WRITE: data_in = eb11c276
+Transaction Count = 6
+Transaction Count = 7
+        WRITE: data_in = 8546383b
+Transaction Count = 8
+        READ: data_out = 6a764179
+Transaction Count = 9
+        READ: data_out = eb11c276
+Transaction Count = 10
+        WRITE: data_in = 6cb8c29d
+Transaction Count = 11
+        READ: data_out = 8546383b
+Transaction Count = 12
+        WRITE: data_in = abcb33f7
+Transaction Count = 13
+Transaction Count = 14
+        READ: data_out = 6cb8c29d
+Transaction Count = 15
+        WRITE: data_in = c1ff8e20
+Transaction Count = 16
+Transaction Count = 17
+Transaction Count = 18
+Transaction Count = 19
+Driver: All 20 transactions driven
+ERROR: Simulation timeout!
+Simulation complete via $finish(1) at time 50 US + 0
+./fifo_pgm_new_tb.sv:413     $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_top.DUT(fifo)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_08b84b7a_3ed59ebc.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_08b84b7a_3ed59ebc.ucd
+TOOL:   xrun(64)        22.09-s003: Exiting on Oct 21, 2025 at 21:21:45 IST  (total: 00:00:03)
