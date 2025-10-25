@@ -1,0 +1,72 @@
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: up_counter
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI On
+#################################################################################
+AAE_INFO: 1 threads acquired from CTE.
+Start delay calculation (fullDC) (1 T). (MEM=2189.32)
+**ERROR: (IMPEXT-2827): Found NONDEFAULT RULE for layer 8 having wire width (280), which is less than the minimum wire width (880)
+for this layer. This may cause inaccuracy in the extraction results. Check the design for correctness.
+Type 'man IMPEXT-2827' for more detail.
+**ERROR: (IMPEXT-2827): Found NONDEFAULT RULE for layer 9 having wire width (280), which is less than the minimum wire width (880)
+for this layer. This may cause inaccuracy in the extraction results. Check the design for correctness.
+Type 'man IMPEXT-2827' for more detail.
+Initializing multi-corner capacitance tables ...
+Initializing multi-corner resistance tables ...
+Total number of fetched objects 16
+AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+AAE_INFO-618: Total number of nets in the design is 18,  88.9 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2243.69 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2207.07 CPU=0:00:00.1 REAL=0:00:00.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2215.1M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2215.1M)
+Starting SI iteration 2
+Start delay calculation (fullDC) (1 T). (MEM=2137.19)
+Glitch Analysis: View WORST -- Total Number of Nets Skipped = 0.
+Glitch Analysis: View WORST -- Total Number of Nets Analyzed = 16.
+Total number of fetched objects 16
+AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+AAE_INFO-618: Total number of nets in the design is 18,  50.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2182.89 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2182.89 CPU=0:00:00.0 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.4 real=0:00:00.0 totSessionCpu=0:04:50 mem=2190.9M)
+
+------------------------------------------------------------------
+          timeDesign Summary
+------------------------------------------------------------------
+
+Setup views included:
+ WORST
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.409  | -0.119  | -0.409  |
+|           TNS (ns):| -2.280  | -0.119  | -2.280  |
+|    Violating Paths:|    8    |    1    |    8    |
+|          All Paths:|    8    |    4    |    8    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 65.660%
+------------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 0.82 sec
+Total Real time: 2.0 sec
+Total Memory Usage: 2154.480469 Mbytes
+Reset AAE Options
+*** timeDesign #1 [finish] : cpu/real = 0:00:00.8/0:00:02.1 (0.4), totSession cpu/real = 0:04:49.9/0:45:01.7 (0.1), mem = 2154.5M
