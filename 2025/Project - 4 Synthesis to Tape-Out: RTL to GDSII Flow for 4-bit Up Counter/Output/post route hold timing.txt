@@ -1,0 +1,62 @@
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: up_counter
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI On
+#################################################################################
+AAE_INFO: 1 threads acquired from CTE.
+Start delay calculation (fullDC) (1 T). (MEM=2147.56)
+*** Calculating scaling factor for FAST libraries using the default operating condition of each library.
+**ERROR: (IMPEXT-2827): Found NONDEFAULT RULE for layer 8 having wire width (280), which is less than the minimum wire width (880)
+for this layer. This may cause inaccuracy in the extraction results. Check the design for correctness.
+Type 'man IMPEXT-2827' for more detail.
+**ERROR: (IMPEXT-2827): Found NONDEFAULT RULE for layer 9 having wire width (280), which is less than the minimum wire width (880)
+for this layer. This may cause inaccuracy in the extraction results. Check the design for correctness.
+Type 'man IMPEXT-2827' for more detail.
+Initializing multi-corner capacitance tables ...
+Initializing multi-corner resistance tables ...
+Total number of fetched objects 16
+AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+AAE_INFO-618: Total number of nets in the design is 18,  88.9 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2179.38 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2179.38 CPU=0:00:00.1 REAL=0:00:00.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2187.4M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2187.4M)
+Starting SI iteration 2
+Start delay calculation (fullDC) (1 T). (MEM=2141.49)
+Glitch Analysis: View BEST -- Total Number of Nets Skipped = 0.
+Glitch Analysis: View BEST -- Total Number of Nets Analyzed = 16.
+Total number of fetched objects 16
+AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+AAE_INFO-618: Total number of nets in the design is 18,  38.9 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2187.19 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2187.19 CPU=0:00:00.0 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.3 real=0:00:01.0 totSessionCpu=0:05:02 mem=2195.2M)
+
+------------------------------------------------------------------
+          timeDesign Summary
+------------------------------------------------------------------
+
+Hold views included:
+ BEST
+
++--------------------+---------+---------+---------+
+|     Hold mode      |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.030  | -0.030  |  0.000  |
+|           TNS (ns):| -0.038  | -0.038  |  0.000  |
+|    Violating Paths:|    3    |    3    |    0    |
+|          All Paths:|    4    |    4    |    0    |
++--------------------+---------+---------+---------+
+
+Density: 65.660%
+------------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 0.76 sec
+Total Real time: 2.0 sec
+Total Memory Usage: 2115.457031 Mbytes
+Reset AAE Options
+*** timeDesign #3 [finish] : cpu/real = 0:00:00.8/0:00:01.1 (0.7), totSession cpu/real = 0:05:01.9/0:47:06.0 (0.1), mem = 2115.5M
