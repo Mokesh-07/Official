@@ -1,0 +1,44 @@
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1257.875 ; gain = 32.621
+set_property -name {xsim.elaborate.coverage.name} -value {DB1} -objects [get_filesets sim_1]
+set_property -name {xsim.elaborate.coverage.dir} -value {cRun1} -objects [get_filesets sim_1]
+set_property -name {xsim.elaborate.coverage.type} -value {sbct} -objects [get_filesets sim_1]
+
+
+
+write_xsim_coverage -cov_db_dir cRun1 -cov_db_name DB1
+
+
+
+export_xsim_coverage -cov_db_name DB1 -cov_db_dir cRun1 -output_dir cReport1 -open_html true 
+
+
+
+
+ Options Set are : 
+
+   Report Format              : html
+   Log File                   : xcrg.log
+   Code Coverage Dir[s]       : cRun1
+   Code Coverage DB[s]        : DB1
+
+
+********************************************************
+                  Code Coverage Report 
+********************************************************
+
+ Restoring Code Coverage DB[s] from : 
+  1	cRun1/xsim.codeCov/DB1/xsim.CCInfo
+
+ Created Coverage Report Directory     : cReport1/codeCoverageReport
+
+ Code Coverage HTML Report directory              : cReport1/codeCoverageReport
+
+ Line Coverage Score 81.9588
+ Branch Coverage Score 62.963
+ Condition Coverage Score 50
+ Toggle Coverage Score 35.52
+
+
+
+
+
