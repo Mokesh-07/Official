@@ -3,3 +3,8 @@ output_run_new_1.png
 Foreground Coverage (%)        : 43.13
 Edge Alignment Score (0–1)     : 0.3398
 Mask Change After Refinement % : 1.55
+output_run_new_2.png
+========== SEGMENTATION QUALITY METRICS ==========
+Foreground Coverage (%)        : 34.74
+Edge Alignment Score (0–1)     : 0.3611
+Mask Change After Refinement % : 0.31
