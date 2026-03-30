@@ -1,0 +1,47 @@
+Reporting 1 scan chain (muxed_scan)
+ 
+Chain 1: top_chain 
+  scan_in:      scan_in 
+  scan_out:     scan_out   
+  shift_enable: SE (active high) 
+  clock_domain: clk (edge: rise)
+  length: 37
+    bit 1 	grant_reg_reg[0]  <clk (rise)>  
+    bit 2 	grant_reg_reg[1]  <clk (rise)>  
+    bit 3 	grant_reg_reg[2]  <clk (rise)>  
+    bit 4 	grant_reg_reg[3]  <clk (rise)>  
+    bit 5 	grant_reg_reg[4]  <clk (rise)>  
+    bit 6 	grant_reg_reg[5]  <clk (rise)>  
+    bit 7 	grant_reg_reg[6]  <clk (rise)>  
+    bit 8 	grant_reg_reg[7]  <clk (rise)>  
+    bit 9 	grant_reg_reg[8]  <clk (rise)>  
+    bit 10 	grant_reg_reg[9]  <clk (rise)>  
+    bit 11 	grant_reg_reg[10]  <clk (rise)>  
+    bit 12 	grant_reg_reg[11]  <clk (rise)>  
+    bit 13 	grant_reg_reg[12]  <clk (rise)>  
+    bit 14 	grant_reg_reg[13]  <clk (rise)>  
+    bit 15 	grant_reg_reg[14]  <clk (rise)>  
+    bit 16 	grant_reg_reg[15]  <clk (rise)>  
+    bit 17 	grant_reg_reg[16]  <clk (rise)>  
+    bit 18 	grant_reg_reg[17]  <clk (rise)>  
+    bit 19 	grant_reg_reg[18]  <clk (rise)>  
+    bit 20 	grant_reg_reg[19]  <clk (rise)>  
+    bit 21 	grant_reg_reg[20]  <clk (rise)>  
+    bit 22 	grant_reg_reg[21]  <clk (rise)>  
+    bit 23 	grant_reg_reg[22]  <clk (rise)>  
+    bit 24 	grant_reg_reg[23]  <clk (rise)>  
+    bit 25 	grant_reg_reg[24]  <clk (rise)>  
+    bit 26 	grant_reg_reg[25]  <clk (rise)>  
+    bit 27 	grant_reg_reg[26]  <clk (rise)>  
+    bit 28 	grant_reg_reg[27]  <clk (rise)>  
+    bit 29 	grant_reg_reg[28]  <clk (rise)>  
+    bit 30 	grant_reg_reg[29]  <clk (rise)>  
+    bit 31 	grant_reg_reg[30]  <clk (rise)>  
+    bit 32 	grant_reg_reg[31]  <clk (rise)>  
+    bit 33 	pointer_reg[0]  <clk (rise)>  
+    bit 34 	pointer_reg[1]  <clk (rise)>  
+    bit 35 	pointer_reg[2]  <clk (rise)>  
+    bit 36 	pointer_reg[3]  <clk (rise)>  
+    bit 37 	pointer_reg[4]  <clk (rise)>  
+------------------------
+
