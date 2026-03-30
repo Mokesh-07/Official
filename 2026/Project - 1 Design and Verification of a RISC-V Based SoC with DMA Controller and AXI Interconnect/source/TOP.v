@@ -139,7 +139,7 @@ AXI_MEMORY mem(
 
 // ================= READ DATA MUX =================
 // CPU reads from either memory or DMA registers
-// ✅ Force CPU signals to safe values during instability
+// Force CPU signals to safe values during instability
 
 assign bus_read  = (done) ? (mem_read  && sel_mem) : 0;
 assign bus_write = (done) ? (mem_write  && sel_mem) : 0;
