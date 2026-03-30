@@ -19,7 +19,6 @@ reg [2:0] state;
 reg [31:0] count;
 reg [31:0] temp;
 
-// ✅ Updated FSM states (added CAPTURE)
 parameter IDLE=0, READ=1, WAIT=2, CAPTURE=3, WRITE=4, WRITE_WAIT=5, DONE=6;
 
 always @(posedge clk or posedge reset) begin
