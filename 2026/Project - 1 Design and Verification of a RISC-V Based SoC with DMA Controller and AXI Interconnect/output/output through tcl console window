@@ -1,0 +1,86 @@
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_TOP'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'G:/work_directory/vivado_pgm/risc_v/risc_v.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'K:/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_TOP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'G:/work_directory/vivado_pgm/risc_v/risc_v.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_TOP_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_TOP'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'G:/work_directory/vivado_pgm/risc_v/risc_v.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'G:/work_directory/vivado_pgm/risc_v/risc_v.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_TOP_behav xil_defaultlib.tb_TOP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: K:/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_TOP_behav xil_defaultlib.tb_TOP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+===== Starting Simulation =====
+T=0 | PC=00000000 | DMA_STATE=0 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=55000 | PC=00000004 | DMA_STATE=0 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=65000 | PC=00000008 | DMA_STATE=0 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=75000 | PC=0000000c | DMA_STATE=0 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=85000 | PC=00000010 | DMA_STATE=0 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=95000 | PC=00000014 | DMA_STATE=0 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=105000 | PC=00000018 | DMA_STATE=1 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=115000 | PC=0000001c | DMA_STATE=2 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=125000 | PC=00000020 | DMA_STATE=3 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=135000 | PC=00000024 | DMA_STATE=4 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=145000 | PC=00000028 | DMA_STATE=5 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=155000 | PC=0000002c | DMA_STATE=1 | BUS_ADDR=00000010 | BUS_WDATA=00000000
+T=165000 | PC=00000030 | DMA_STATE=2 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=175000 | PC=00000034 | DMA_STATE=3 | BUS_ADDR=00000004 | BUS_WDATA=00000000
+T=185000 | PC=00000038 | DMA_STATE=4 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=195000 | PC=0000003c | DMA_STATE=5 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=205000 | PC=00000040 | DMA_STATE=1 | BUS_ADDR=00000014 | BUS_WDATA=00000000
+T=215000 | PC=00000044 | DMA_STATE=2 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=225000 | PC=00000048 | DMA_STATE=3 | BUS_ADDR=00000008 | BUS_WDATA=00000000
+T=235000 | PC=0000004c | DMA_STATE=4 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=245000 | PC=00000050 | DMA_STATE=5 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=255000 | PC=00000054 | DMA_STATE=1 | BUS_ADDR=00000018 | BUS_WDATA=00000000
+T=265000 | PC=00000058 | DMA_STATE=2 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=275000 | PC=0000005c | DMA_STATE=3 | BUS_ADDR=0000000c | BUS_WDATA=00000000
+T=285000 | PC=00000060 | DMA_STATE=4 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=295000 | PC=00000064 | DMA_STATE=5 | BUS_ADDR=00000000 | BUS_WDATA=00000000
+T=305000 | PC=00000068 | DMA_STATE=6 | BUS_ADDR=0000001c | BUS_WDATA=00000000
+===== DMA COMPLETED =====
+Checking Memory Copy:
+MEM[0]  = 11111111
+MEM[1]  = 22222222
+MEM[2]  = 33333333
+MEM[3]  = 44444444
+MEM[4]  = 00000000
+MEM[5]  = 00000000
+MEM[6]  = 00000000
+MEM[7]  = 00000000
+===== Simulation Finished =====
+$stop called at time : 315 ns : File "G:/work_directory/vivado_pgm/risc_v/risc_v.srcs/sim_1/new/tb_TOP.v" Line 70
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1825.426 ; gain = 0.000
+synth_design -top TOP -part xc7k70tfbv676-1 -lint 
+Command: synth_design -top TOP -part xc7k70tfbv676-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25112
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-83] Releasing license: Synthesis
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
