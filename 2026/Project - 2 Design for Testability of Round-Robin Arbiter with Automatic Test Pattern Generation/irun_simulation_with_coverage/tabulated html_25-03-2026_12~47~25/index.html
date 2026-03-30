@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Metrics Report</title>
+<!--link type="text/css" rel="stylesheet" href="lib/jquery-ui.css" /-->
+<script src="resources/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="resources/lib/jquery-ui.min.js" type="text/javascript"></script>
+<link href="resources/skin-win7/ui.fancytree.css" rel="stylesheet" type="text/css">
+
+<script src="resources/src/jquery.fancytree.js" type="text/javascript"></script>
+<script src="resources/src/jquery.fancytree.table.js" type="text/javascript"></script>
+<script src="resources/src/jquery.fancytree.filter.js" type="text/javascript"></script>
+
+<link href="resources/report/sample.css" rel="stylesheet" type="text/css">
+<script src="resources/report/sample.js" type="text/javascript"></script>
+
+<!-- For deviding the page to two  -->
+<link type="text/css" rel="stylesheet" href="resources/lib/layout-default-latest.css"/>
+<script type="text/javascript" src="resources/lib/jquery.layout-1.3.0.rc30.80.js"></script>
+<script src="resources/lib/cadence-pannels.js" type="text/javascript"></script>
+<script src="resources/lib/tables_common.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="./resources/imc.css"/>
+
+
+<style type="text/css">
+    ul.fancytree-container,
+    table.fancytree-container {
+        font-size: 0.8em;
+    }
+</style>
+
+<!-- End_Exclude -->
+<style type="text/css">
+    /* Fancytree extension 'table' */
+    table.fancytree-ext-table {
+        width: 100%;
+    }
+
+    table.fancytree-ext-table tbody tr:nth-child(even) {
+        background-color: #f4f4f8;
+    }
+
+    table.fancytree-ext-table tbody tr td {
+        border: 1px solid lightgray;
+    }
+
+    /* Fancytree extension 'columnview' */
+    table.fancytree-ext-columnview {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table.fancytree-ext-columnview tbody tr[
+
+    0
+    ]
+    {
+        height: 200px
+    ;
+    }
+</style>
+
+<!-- Add code to initialize the tree when the document is loaded: -->
+<script type="text/javascript">
+
+
+    function diff(input, noShowTable) {
+
+        // Attach the fancytree widget to an existing <div id="tree"> element
+        // and pass the tree options as an argument to the fancytree() function:
+
+        $("#treetable").fancytree({
+            extensions: ["table", "filter"],
+            quicksearch: true,
+            checkbox: false,
+            selectMode: 1,
+            filter: {
+                mode: "hide",
+                autoApply: true
+            },
+
+            source: {
+                url: input,
+                cache: true
+            },
+
+            activate: function (event, data) {
+                // $("#echoActive1").text(data.node.title);
+                if (data.node.data.bins_json === undefined) {
+                    diff_bins("resources/report/empty.json")
+
+                } else {
+                    diff_bins(data.node.data.bins_json);
+
+                }
+            },
+
+            lazyLoad: function (event, data) {
+                data.result = {url: "lazy.json"};
+            },
+
+            table: {
+                indentation: 20,      // indent 20px per node level
+                nodeColumnIdx: 2     // render the node title into the 0nd column
+                //checkboxColumnIdx: 0  // render the checkboxes into the 1st column
+            },
+
+            renderColumns: function (event, data) {
+                   getCell(event, data, 2);
+
+            },
+            icons: false, // Display node icons.
+            focusOnSelect: true,
+            postProcess: function (event, data) {
+                //document.getElementById('diff_header').style.display='block';
+               // document.getElementById('treetable').style.display = 'block';
+                document.getElementById('treetable').style.visibility = 'visible';
+                document.getElementById('filter_div').style.visibility = 'visible';
+                if (noShowTable) return;
+                document.getElementById('bins_treetable').style.visibility = 'visible';
+                document.getElementById('bins_filter_div').style.visibility = 'visible';
+                document.getElementById('loading').innerHTML ="";
+                document.getElementById('loading').style.visibility = 'hidden';
+
+
+            }
+        });
+        var tree_table = $("#treetable").fancytree("getTree");
+        implementFilter($("input[name=search1]"), $("button#btnResetSearch1"), $("span#matches1"), tree_table);
+
+    }
+</script>
+
+<script type="text/javascript">
+
+    var bin_title_index = 1; //2,
+
+    function diff_bins(input) {
+
+        // Attach the fancytree widget to an existing <div id="tree"> element
+        // and pass the tree options as an argument to the fancytree() function:
+        document.getElementById('bins_treetable').style.visibility = 'visible';
+        document.getElementById('bins_filter_div').style.visibility = 'visible';
+                
+
+        $("#bins_treetable").fancytree({
+            extensions: ["table", "filter"],
+            quicksearch: true,
+            checkbox: false,
+            filter: {
+                mode: "hide",
+                autoApply: true
+            },
+            source: {
+                url: input,
+                cache: true
+            },
+
+            lazyLoad: function (event, data) {
+                data.result = {url: "lazy.json"};
+            },
+
+            table: {
+                indentation: 0,      // indent 20px per node level
+                nodeColumnIdx: bin_title_index   // render the node title into the 0nd column
+                //checkboxColumnIdx: 0  // render the checkboxes into the 1st column
+            },
+
+            renderColumns: function (event, data) {
+                    getCell(event, data, bin_title_index);
+
+            },
+            postProcess: function (event, data) {
+                //document.getElementById('diff_header').style.display='block';
+                document.getElementById('bins_treetable').style.display = 'block';
+
+            },
+            icons: false, // Display node icons.
+            focusOnSelect: true
+
+        });
+
+        var bins_table = $("#bins_treetable").fancytree("getTree");
+
+        //filter
+        implementFilter($("input[name=search]"), $("button#btnResetSearch"), $("span#matches"), bins_table);
+
+    }
+</script>
+
+</head>
+<body class="example">
+<!-- manually attach allowOverflow method to pane -->
+<div class="ui-layout-north">
+    <!-- onmouseover="myLayout.allowOverflow('north')" onmouseout="myLayout.resetOverflow(this)"-->
+
+    <p class="fs"><a STYLE="float: right" class="namet" href="resources/legend.html">Legend and Help</a>
+            <br>
+            <label class="fs" STYLE="float: right"><input class="fs" type="checkbox" id="colorSet"
+                                                          title="Color Settings"
+                                                          onClick="changeColor()">Color scheme</label>
+    </p>
+<table width="100%">
+    <tr>
+        <td style="font-size:x-large"><img border="0" src="./resources/cdnlogo.png">&nbsp;&nbsp;&nbsp;Metrics Report</font>
+        </td>
+    </tr>
+    <tr>
+        <td><i>Generated by M24_2 on 2026/03/25 00:47:58 (host vlsilab10.nitc.ac.in)</i></td>
+    </tr>
+</table>
+
+<p class="title">Metrics Report</p>
+<table class="summary_table">
+    <thead>
+    <tr>
+        <th class="wht_wider"><b>Context Info:</b></th>
+    </tr>
+    </thead>
+    <tr>
+        <td class="wht_wider">
+        <b>loaded run directory</b><br>&nbsp;&nbsp;./cov_work/scope/test<br><br><b>model files</b><br>&nbsp;&nbsp;domain : hdl<br>&nbsp;&nbsp;&nbsp;&nbsp;./cov_work/scope/icc_081b549c_00000000.ucm<br><br><b>ucds files</b><br>&nbsp;&nbsp;domain : hdl<br>&nbsp;&nbsp;&nbsp;&nbsp;./cov_work/scope/test/icc_081b549c_00000000.ucd<br><br><b>loaded refinements</b><br>&nbsp;&nbsp;not loaded<br><br><b>ccf files</b><br>&nbsp;&nbsp;not loaded<br><br>
+        </td>
+    </tr>
+</table>
+
+<p class="subtitle">View Name: All_Metrics</p>
+
+<p class="subtitle">Verification Scope: default</p>
+
+
+
+<p class="subtitle">Version: IMC: 15.20-s069: (c) Copyright 1995-2019 Cadence Design Systems Inc</p>
+
+</div>
+
+
+<div class="ui-layout-east">
+    <div id="bins_filter_div" class="description">
+        <p>
+            <label>Filter by name:</label>
+            <input name="search" placeholder="Filter...">
+            <button id="btnResetSearch">&times;</button>
+            <span id="matches"></span>
+            <!--span id="echoActive1">-</span-->
+        </p>
+
+    </div>
+    <table id="bins_treetable" width="600px">
+        <colgroup>
+
+                <col width="100px">
+
+            </col>
+
+                <col width="100px">
+
+            </col>
+
+                <col width="100px">
+
+            </col>
+
+                <col width="100px">
+
+            </col>
+
+                <col width="100px">
+
+            </col>
+
+        </colgroup>
+        <thead>
+        <tr>
+            <th class="wht">
+            Exclusion Rule Type
+            </th>
+            <th class="wht">
+            Name
+            </th>
+            <th class="wht">
+            Overall Average Grade
+            </th>
+            <th class="wht">
+            Overall Covered
+            </th>
+            <th class="wht">
+            Score
+            </th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+<div class="ui-layout-center">
+    <div id="filter_div" class="description">
+        <p>
+
+            <label>Filter by name:</label>
+            <input name="search1" placeholder="Filter...">
+            <button id="btnResetSearch1">&times;</button>
+            <span id="matches1"></span>
+        </p>
+    </div>
+    <div top=20px left=40px id="loading" width=100% align="center"> <img align="center" src="resources/report/spinner.gif" border="0" /> </div>
+    <table id="treetable">
+        <colgroup>
+
+                <col width="100px">
+
+            </col>
+
+                <col width="100px">
+
+            </col>
+
+                <col width="500px">
+
+            </col>
+
+                <col width="100px">
+
+            </col>
+
+                <col width="100px">
+
+            </col>
+
+                <col width="100px">
+
+            </col>
+
+        </colgroup>
+        <thead>
+        <tr>
+            <th class="wht">
+            Exclusion Rule Type
+            </th>
+            <th class="wht">
+            UNR
+            </th>
+            <th class="wht_wider">
+            Name
+            </th>
+            <th class="wht">
+            Overall Average Grade
+            </th>
+            <th class="wht">
+            Overall Covered
+            </th>
+            <th class="wht">
+            Assertion Status Grade
+            </th>
+
+
+        </tr>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<script>
+    function initUI(noShowTable) {
+        document.getElementById('treetable').style.visibility = 'hidden';
+        document.getElementById('filter_div').style.visibility = 'hidden';
+        document.getElementById('bins_treetable').style.visibility = 'hidden';
+        document.getElementById('bins_filter_div').style.visibility = 'hidden';
+        document.getElementById('loading').style.visibility = 'visible';
+        diff("tree.json", noShowTable);
+    }
+    initUI(false);
+    //    diff_bins("lazy.json");
+
+</script>
+
+<p class="subtitle">Coverage Color Legend</p>
+<table class="summary_table">
+    <tr>
+        <th bgcolor="ff6666" CLASS="range0">&nbsp;&nbsp;&nbsp;&nbsp;0</th>
+        <th bgcolor="ff9999" CLASS="range20TO24"><25</th>
+        <th bgcolor="ffcc99" CLASS="range45TO49"><50</th>
+        <th bgcolor="ffff66" CLASS="range70TO74"><75</th>
+        <th bgcolor="99ff66" CLASS="range95TO99"><100</th>
+        <th bgcolor="33cc00" CLASS="range100">100</th>
+        <th bgcolor="cccccc" CLASS="rangenone">n/a</th>
+        <th bgcolor="cccccc" CLASS="rangenone">Not Scored</th>
+    </tr>
+
+</table>
+</body>
+</html>
+
