@@ -1,0 +1,88 @@
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+          1,068  Blocks                       1,434  Blocks
+          4,864  Pins                         1,434  Nodes
+          1,104  Nets
+
+Primary Inputs:                      Primary Outputs:
+         36  Input Only                        33  Output Only
+          0  Input/Output                       0  Input/Output
+         36  Total Inputs                      33  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+          0  Tied to 0                          0  Two-State
+          0  Tied to 1                          3  Three-State
+      1,069  Tied to X                          3  Total Dotted Nets
+      1,069  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+          0  Latches
+
+
+          0  Total Flops
+
+      1,067  Technology Library Cell Instances
+
+[end TLM_055] 
+
+
+INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199] 
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =          100,712,272  bytes
+
+                      CPU Time =    0:00:00.03
+                  Elapsed Time =    0:00:02.77                    [end TDA_001]
+
+
+
+INFO (TEI-200): Build Model - Controller completed. [end TEI_200] 
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+   1025 WARNING (TEI-143): All pins on net 'n_100' of 'cell rr_arbiter' appear to be sinks. This may cause creation of Verilog patterns with scanformat of parallel to fail. Cell contents file: '/home/M24_2/cadence_edt/HMK_VDA/mokesh_project_test_arbiter/atpg_arbiter_using_modus/test_scripts/rr_arbiter.test_netlist.v'.   
+     49 WARNING (TEI-160): Instance '\pointer_reg[2]' in 'cell rr_arbiter' refers to undefined 'cell SDFFRHQX1'. The cell will be created since blackbox=yes was specified. Cell contents file: '/home/M24_2/cadence_edt/HMK_VDA/mokesh_project_test_arbiter/atpg_arbiter_using_modus/test_scripts/rr_arbiter.test_netlist.v'.   
+      3 WARNING (TLM-105): Multi-source net 'pointer[1]' of 'cell rr_arbiter' has no dotting function(DFN) properties specified. Input option 'defaultDFN' set to 'T' is used to model the net.   
+   1025 WARNING (TLM-117): TIEX is generated for sourceless net 'n_100' in 'cell rr_arbiter' based on input option 'defaultTIE' set to 'X'.   
+      5 WARNING (TLM-140): Cell 'SDFFRHQX1' has output and/or inout pins with no internal net. TIEX generated to drive pin 'Q' and all similar pins.   
+
+  WARNING [Severe] Messages...
+     49 WARNING (TEI-010): [Severe] Module 'NOR2BX2' is undefined. The module will be defined as a black box.  
+      1 WARNING (TEI-813): [Severe] Verilog parsing has produced severe messages. Parsing return code is 1. Build Model may fail.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+
+

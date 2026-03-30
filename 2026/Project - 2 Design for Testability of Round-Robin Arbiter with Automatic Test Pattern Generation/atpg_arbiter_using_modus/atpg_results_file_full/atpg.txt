@@ -1,0 +1,91 @@
+
+                            Global Statistics
+
+                    ATCov  ----------------------- Global Faults --------------------------
+                   Global        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00          808            0            0            0          808
+Collapsed Static     0.00          808            0            0            0          808
+PI Static            0.00           72            0            0            0           72
+PO Static            0.00           66            0            0            0           66
+
+Total Dynamic                        0
+
+Parametric        
+
+IDDq                 0.00          808            0                                    808
+
+
+
+INFO (TFM-103): Creating faultStatus file /home/M24_2/cadence_edt/HMK_VDA/mokesh_project_test_arbiter/atpg_arbiter_using_modus/test_scripts/tbdata/faultStatus.  [end TFM_103] 
+
+                           Testmode Statistics: FULLSCAN
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00          142            0            0            0          142          808            0            0            0          808
+Collapsed Static     0.00   0.00          142            0            0            0          142          808            0            0            0          808
+PO Static            0.00   0.00           66            0            0            0           66           66            0            0            0           66
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00          808            0                                    808          808            0                                    808
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+
+                  %Active      #Faults      #Active    #Inactive
+Total Static        17.57          808          142          666
+Collapsed Static    17.57          808          142          666
+PI Static            0.00           72            0           72
+PO Static          100.00           66           66            0
+
+Total Dynamic                        0
+
+Parametric        
+
+There are 1 test mode(s) defined:
+      FULLSCAN
+
+[end TFM_704]
+INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.  [end TFM_109] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            7,472,160  bytes
+
+                      CPU Time =    0:00:00.01
+                  Elapsed Time =    0:00:00.14                    [end TDA_001]
+
+     Date Ended:  Thursday Mar 26 11:58:52 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /home/M24_2/cadence_edt/HMK_VDA/mokesh_project_test_arbiter/atpg_arbiter_using_modus/test_scripts/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /home/M24_2/cadence_edt/HMK_VDA/mokesh_project_test_arbiter/atpg_arbiter_using_modus/test_scripts/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+
+

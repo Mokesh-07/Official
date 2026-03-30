@@ -1,0 +1,63 @@
+
+WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+           see preceding message(s) for details. [end TTM_809] 
+
+Test Function Pin Information for Test Mode:  FULLSCAN
+-------------------------------------------
+
+          2  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          1  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          0  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+          1  SI    (Scan Input)                Pins
+          1  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+         34      PI  +SC                                  rst_n / rst_n
+          1      PI  -EC  -SC                             clk / clk
+          0      PI  +SE                                  SE / SE
+         35      PI   SI                                  scan_in / scan_in
+         68      PO   SO                                  scan_out / scan_out
+
+
+
+Modus Build Test Mode(s) completed. Highest severity is (WARNING).
+
+            Cumulative Time in hours:minutes:seconds:
+                   CPU Time =   0:00:00.06
+               Elapsed Time =   0:00:01.07
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains  5.02% active logic, 94.98% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-359): There are 1 scan chains which are only observable.   
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+      1 WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+
+
