@@ -25,7 +25,7 @@ initial begin
 end
 always @(posedge clk) begin
     if(M_WRITE)
-        MEM[M_ADDR[9:2]] <= M_WDATA;   // ✅ word aligned
+        MEM[M_ADDR[9:2]] <= M_WDATA;   
 
     if(M_READ)
         M_RDATA <= MEM[M_ADDR[9:2]];
